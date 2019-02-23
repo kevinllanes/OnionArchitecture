@@ -1,0 +1,39 @@
+﻿@model OnionArchitecture.Core.DomainModels.Student
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Student</h2>
+
+@using (Html.BeginForm("Edit", "Student"))
+{
+    <p class="alert alert-info">All fiedls are <strong>required</strong>.</p>
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(p => p.Id)
+
+    <div class="form-group">
+        @Html.LabelFor(p => p.FirstName)
+        @Html.TextBoxFor(p => p.FirstName, new { @class = "form-control", autofocus = "autofocus" })
+        @Html.ValidationMessageFor(p => p.FirstName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(p => p.LastName)
+        @Html.TextBoxFor(p => p.LastName, new { @class = "form-control", autofocus = "autofocus" })
+        @Html.ValidationMessageFor(p => p.LastName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(p => p.MiddleName)
+        @Html.TextBoxFor(p => p.MiddleName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.MiddleName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(p => p.EnrollmentDate)
+        @Html.TextBoxFor(p => p.EnrollmentDate, new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.EnrollmentDate)
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg">Save</button>
+    @Html.ActionLink("Back to List", "Index")
+}
+
+
+

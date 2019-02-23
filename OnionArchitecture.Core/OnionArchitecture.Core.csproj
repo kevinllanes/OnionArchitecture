@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B589BA9A-75D5-426C-ADEA-788E76E94EA2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnionArchitecture.Core</RootNamespace>
+    <AssemblyName>OnionArchitecture.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Identity\IApplicationRoleManager.cs" />
+    <Compile Include="Data\Identity\IApplicationUserManager.cs" />
+    <Compile Include="Data\Identity\SignInStatus.cs" />
+    <Compile Include="Data\IRepository.cs" />
+    <Compile Include="Data\IUnitOfWork.cs" />
+    <Compile Include="DomainModels\Common\BaseEntity.cs" />
+    <Compile Include="DomainModels\Common\OrderBy.cs" />
+    <Compile Include="DomainModels\Common\PaginatedList.cs" />
+    <Compile Include="DomainModels\Course.cs" />
+    <Compile Include="DomainModels\Department.cs" />
+    <Compile Include="DomainModels\Enrollment.cs" />
+    <Compile Include="DomainModels\Grade.cs" />
+    <Compile Include="DomainModels\Identity\ApplicationAuthenticationDescription.cs" />
+    <Compile Include="DomainModels\Identity\ApplicationExternalLoginInfo.cs" />
+    <Compile Include="DomainModels\Identity\ApplicationIdentityResult.cs" />
+    <Compile Include="DomainModels\Identity\ApplicationMessage.cs" />
+    <Compile Include="DomainModels\Identity\ApplicationRole.cs" />
+    <Compile Include="DomainModels\Identity\ApplicationUserClaim.cs" />
+    <Compile Include="DomainModels\Identity\ApplicationUserLogin.cs" />
+    <Compile Include="DomainModels\Identity\ApplicationUserLoginInfo.cs" />
+    <Compile Include="DomainModels\Identity\ApplicationUserRole.cs" />
+    <Compile Include="DomainModels\Identity\AppUser.cs" />
+    <Compile Include="DomainModels\Instructor.cs" />
+    <Compile Include="DomainModels\OfficeAssignment.cs" />
+    <Compile Include="DomainModels\Person.cs" />
+    <Compile Include="DomainModels\Student.cs" />
+    <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Extensions\QueryableExtensions.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IService%271.cs" />
+    <Compile Include="Services\IService.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
